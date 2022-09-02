@@ -14,7 +14,7 @@ public class Execute01 {
 
 
         // ---------- 2.ADIM => Database'e BAGLAN ------------
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "6901");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "690101");
 
 
         // ---------- 3.ADIM => Statement OLUSTUR ------------
