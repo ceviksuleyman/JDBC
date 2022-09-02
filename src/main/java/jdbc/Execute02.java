@@ -8,7 +8,7 @@ public class Execute02 {
 
         Class.forName("org.postgresql.Driver");
 
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "6901");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "690101");
 
         Statement st = con.createStatement();
 
@@ -25,7 +25,6 @@ public class Execute02 {
         }
 
 
-
         // TASK-2 : "region_id" nin 2'den buyuk oldugu "country_id" ve "country_name" degerlerini cagirin.
         String sql2 = "SELECT country_id, country_name FROM countries WHERE region_id > 2";
 
@@ -36,22 +35,20 @@ public class Execute02 {
         }
 
 
-
         // TASK-3 : "number_of_employees" degeri en dusuk olan satirin tum degerlerini cagirin.
         String sql3 = "SELECT * FROM companies WHERE number_of_employees = (SELECT MIN(number_of_employees) FROM companies)";
 
         ResultSet rs3 = st.executeQuery(sql3);
 
         while (rs3.next()) {
-            System.out.println(rs3.getInt("company_id") +
-                    " => " + rs3.getString("company") +
-                    " -> " + rs3.getInt("number_of_employees"));
+            System.out.println(rs3.getInt("company_id") + " => " +
+                    rs3.getString("company") + " -> " +
+                    rs3.getInt("number_of_employees"));
         }
 
 
         con.close();
         st.close();
-        //result1.close();
 
     }
 }

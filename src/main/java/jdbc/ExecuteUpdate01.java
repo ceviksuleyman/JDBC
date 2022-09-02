@@ -8,7 +8,7 @@ public class ExecuteUpdate01 {
 
         Class.forName("org.postgresql.Driver");
 
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "6901");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "690101");
 
         Statement st = con.createStatement();
 
@@ -30,9 +30,7 @@ public class ExecuteUpdate01 {
 
         while (result1.next()) {
 
-            System.out.println(result1.getInt(1) + " -> " +
-                    result1.getString(2) + " -> " +
-                    result1.getInt(3));
+            System.out.println(result1.getInt(1) + " -> " + result1.getString(2) + " -> " + result1.getInt(3));
         }
 
         con.close();

@@ -8,7 +8,7 @@ public class PreparedStatement01 {
 
         Class.forName("org.postgresql.Driver");
 
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "6901");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "690101");
 
         Statement st = con.createStatement();
 
@@ -34,28 +34,24 @@ public class PreparedStatement01 {
 
         while (result1.next()) {
 
-            System.out.println(result1.getInt(1) + " -> " +
-                    result1.getString(2) + " -> " +
-                    result1.getInt(3));
+            System.out.println(result1.getInt(1) + " -> " + result1.getString(2) + " -> " + result1.getInt(3));
         }
 
-        //GOOGLE icin degisiklik
+
+        // GOOGLE icin degisiklik
         pst1.setInt(1, 15000);
         pst1.setString(2, "GOOGLE");
-
 
         int updateRowSayisi2 = pst1.executeUpdate();
         System.out.println(updateRowSayisi2 + " Satir Guncellendi");
 
-
         String sql3 = "SELECT * FROM companies";
+
         ResultSet result2 = st.executeQuery(sql3);
 
         while (result2.next()) {
 
-            System.out.println(result2.getInt(1) + " -> " +
-                    result2.getString(2) + " -> " +
-                    result2.getInt(3));
+            System.out.println(result2.getInt(1) + " -> " + result2.getString(2) + " -> " + result2.getInt(3));
         }
 
     }
