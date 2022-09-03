@@ -73,8 +73,8 @@ public class C06_CallableStatement {
         CallableStatement callSt2 = con.prepareCall("{? = call koniHacmi(?,?)}");
 
         callSt2.registerOutParameter(1, Types.NUMERIC);
-        callSt2.setInt(2, 2);
-        callSt2.setInt(3, 3);
+        callSt2.setInt(2, 3);
+        callSt2.setInt(3, 4);
 
         callSt2.execute();
 
