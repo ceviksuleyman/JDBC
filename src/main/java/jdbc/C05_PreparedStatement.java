@@ -2,7 +2,7 @@ package jdbc;
 
 import java.sql.*;
 
-public class PreparedStatement01 {
+public class C05_PreparedStatement {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
@@ -54,5 +54,42 @@ public class PreparedStatement01 {
             System.out.println(result2.getInt(1) + " -> " + result2.getString(2) + " -> " + result2.getInt(3));
         }
 
-    }
-}
+
+        //TASK-4 : "SELECT * FROM <table name>" query'sini prepared statement ile kullanın.
+
+        System.out.println("~~~~~~~~~~~~~~~~~~");
+        read_data(con, "countries");
+
+        con.close();
+        st.close();
+        result2.close();
+        result1.close();
+
+
+    }//main
+
+    //Bir tablonun istenilen datasini prepared statement ile cagirmak icin kullanilan method.
+    public static void read_data(Connection con, String tableName) { // method
+
+        try {
+            String query = String.format("SELECT * FROM %s", tableName);// format(), dinamik String olusturmak icin
+
+            Statement statement = con.createStatement();
+
+            // SQL query'i calistir.
+            ResultSet resultSet = statement.executeQuery(query); // datayi cagirip resultSet konteynirina koyuyuoruz.
+
+            while (resultSet.next()) { // tum datayi cagir
+
+                System.out.println(resultSet.getString(1) + " -> " +
+                        resultSet.getString(2) + " -> " +
+                        resultSet.getInt(3));
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }//methos son
+
+}//class

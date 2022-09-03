@@ -2,13 +2,13 @@ package jdbc;
 
 import java.sql.*;
 
-public class ExecuteQuery01 {
+public class C03_ExecuteQuery {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
         Class.forName("org.postgresql.Driver");
 
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "6901");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed", "postgres", "690101");
 
         Statement st = con.createStatement();
 

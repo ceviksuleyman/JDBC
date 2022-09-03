@@ -2,7 +2,7 @@ package jdbc;
 
 import java.sql.*;
 
-public class ExecuteUpdate01 {
+public class C04_ExecuteUpdate {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 

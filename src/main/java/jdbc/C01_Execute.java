@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Execute01 {
+public class C01_Execute {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 

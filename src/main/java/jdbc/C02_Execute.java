@@ -2,7 +2,7 @@ package jdbc;
 
 import java.sql.*;
 
-public class Execute02 {
+public class C02_Execute {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
