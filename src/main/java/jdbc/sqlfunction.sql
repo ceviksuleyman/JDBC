@@ -21,7 +21,7 @@ SELECT * FROM toplamaF(14,21) AS toplam;
 
 -- TASK-2 : Koninin hacmini hesaplayan bir function yazın.
 
-CREATE OR REPLACE FUNCTION koniAlan(x NUMERIC, y NUMERIC)
+CREATE OR REPLACE FUNCTION koniHacmi(x NUMERIC, y NUMERIC)
 RETURNS NUMERIC
 LANGUAGE plpgsql
 AS
@@ -34,5 +34,5 @@ END
 $$
 
 
-SELECT * FROM koniAlan(3,5) AS koniAlan
+SELECT * FROM koniAlan(3,5) AS koniHacmi
 

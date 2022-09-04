@@ -74,7 +74,7 @@ public class C06_CallableStatement {
 
         callSt2.registerOutParameter(1, Types.NUMERIC);
         callSt2.setInt(2, 3);
-        callSt2.setInt(3, 4);
+        callSt2.setInt(3, 5);
 
         callSt2.execute();
 
