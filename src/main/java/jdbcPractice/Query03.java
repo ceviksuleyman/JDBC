@@ -13,11 +13,11 @@ public class Query03 {
 
         //Statement st = con.createStatement();
 
-        PreparedStatement preparedStatement = con.prepareStatement("SELECT * FROM ogrenciler");
+        PreparedStatement pStatement = con.prepareStatement("SELECT * FROM ogrenciler");
 
-        ResultSet resultSet = preparedStatement.executeQuery();
+        ResultSet rSet = pStatement.executeQuery();
 
-        ResultSetMetaData rsmd = resultSet.getMetaData();
+        ResultSetMetaData rsmd = rSet.getMetaData();
 
         System.out.println("Tablodaki sutun sayisi : " + rsmd.getColumnCount());
 
@@ -40,8 +40,8 @@ public class Query03 {
         System.out.println("Tablo ismi : "+ rsmd.getTableName(3));
 
         con.close();
-        preparedStatement.close();
-        resultSet.close();
+        pStatement.close();
+        rSet.close();
 
     }
 }
