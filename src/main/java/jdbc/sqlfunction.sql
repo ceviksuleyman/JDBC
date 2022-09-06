@@ -34,5 +34,5 @@ END
 $$
 
 
-SELECT * FROM koniAlan(3,5) AS koniHacmi
+SELECT * FROM koniHacmi(3,5) AS koniHacmi
 
