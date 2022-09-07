@@ -37,7 +37,7 @@ public class Query03 {
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        System.out.println("Tablo ismi : "+ rsmd.getTableName(3));
+        System.out.println("Tablo ismi : " + rsmd.getTableName(3));
 
         con.close();
         pStatement.close();
