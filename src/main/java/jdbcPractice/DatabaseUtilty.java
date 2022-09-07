@@ -10,7 +10,7 @@ public class DatabaseUtilty {
     private static Statement statement;
     private static ResultSet resultSet;
 
-    public static void createConnection() { // Method1 -> Baglanti olustur
+    public static void createConnection() { // Method1 -> Database ile baglanti olustur
 
         String url = "jdbc:postgresql://localhost:5432/techproed";
         String user = "postgres";
@@ -25,7 +25,7 @@ public class DatabaseUtilty {
     }//method1 son
 
 
-    public static List<Object> getColumnData(String query, String column) { // method2 -> herhangi bir sutundaki tum verileri al
+    public static List<Object> getColumnData(String query, String column) { // method2 -> bir sutundaki tum verileri al
 
         executeQuery(query);
         List<Object> rowList = new ArrayList<>();
@@ -43,7 +43,7 @@ public class DatabaseUtilty {
 
     }//method2 son
 
-    public static void executeQuery(String query) { // method3 ->
+    public static void executeQuery(String query) { // method3
 
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
