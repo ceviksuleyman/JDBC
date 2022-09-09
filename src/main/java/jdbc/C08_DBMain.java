@@ -11,7 +11,7 @@ public class C08_DBMain {
 
 
         // connection fonksiyonu cagir
-        Connection con = dbWork.connect_to_db("techproed", "postgres", "690101");
+        Connection con = dbWork.connect_to_db("techproed", "postgres", "6901");
 
         // tablo olustur
         dbWork.createTable(con, "employees");

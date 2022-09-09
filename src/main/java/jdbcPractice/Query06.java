@@ -1,12 +1,10 @@
 package jdbcPractice;
 
-import java.sql.SQLException;
-
 import static jdbcPractice.DatabaseUtilty.*;
 
 public class Query06 {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 
         createConnection(); // Database ile baglanti kuruldu
 

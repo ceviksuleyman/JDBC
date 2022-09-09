@@ -9,7 +9,7 @@ public class Query02 {
         Class.forName("org.postgresql.Driver");
 
         Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed",
-                "postgres", "690101");
+                "postgres", "6901");
 
         Statement st = con.createStatement();
 
