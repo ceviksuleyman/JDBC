@@ -14,7 +14,7 @@ public class DatabaseUtilty {
 
         String url = "jdbc:postgresql://localhost:5432/techproed";
         String user = "postgres";
-        String password = "6901";
+        String password = "690101";
         try {
             connection = DriverManager.getConnection(url, user, password);
 

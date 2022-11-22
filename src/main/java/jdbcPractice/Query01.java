@@ -11,7 +11,7 @@ public class Query01 {
 
         // 2) Database'e Baglan
         Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/techproed",
-                "postgres", "6901");
+                "postgres", "690101");
 
         // 3) Statement Olustur
         Statement st = con.createStatement();
